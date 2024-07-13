@@ -349,11 +349,15 @@ SCL Configs
 This part defines various configuration parameters for the standard cell library being used:
 
    GLB_RT_ADJUSTMENT: Global routing tree adjustment.
+   
    SYNTH_MAX_FANOUT: Maximum fanout allowed during synthesis.
+   
    CLOCK_PERIOD: Overwrites the previous clock period setting.
+   
    FP_CORE_UTIL: Specifies core utilization for floorplanning.
+   
    PL_TARGET_DENSITY: Sets the target density for placement.
-    
+   
 ![28](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20161133.png)
 
 
