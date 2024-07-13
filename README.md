@@ -360,6 +360,83 @@ This part defines various configuration parameters for the standard cell library
    
 ![28](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20161133.png)
 
+### SK3 - Lecture3
+
+#### Inside an OpenLANE Design: Directory Structure and PDK Integration:
+
+Screenshot 1 (Directory Structure):
+
+The user navigates to a specific design directory within an OpenLANE project:
+``
+.../openlane/designs/picorv32a/runs/13-07_10-49
+``
+
+Key Subdirectories:
+
+PDK_SOURCES: Contains links or copies of files directly from the Skywater PDK.
+
+results: Stores the output files generated during various stages of the OpenLANE flow. Further subdirectories like synthesis, placement, routing, lvs indicate where results for each stage are stored.
+
+logs: Contains log files capturing the execution details of each step.
+
+config.tcl: This crucial file likely holds design-specific configurations and settings for OpenLANE tools.
+
+![29](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l3/Screenshot%202024-07-13%20181649.png)
+
+Screenshot 2 (PDK License):
+
+Shows the contents of the merged.lef file within the PDK_SOURCES directory.The header clearly states that it's part of the Skywater PDK and released under the Apache License 2.0.This file likely contains Library Exchange Format (LEF) data, providing physical layout information about the standard cells within the PDK.
+
+![30](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l3/Screenshot%202024-07-13%20181900.png)
+
+Screenshot 3 (Design Configuration):
+
+Displays a snippet of the run.cfg file, a primary configuration file for OpenLANE.
+
+PDK Integration:
+``
+set ::env(PDK_ROOT) ...: Sets the root directory of the Skywater PDK, allowing OpenLANE tools to access its contents.
+``
+
+Design-Specific Settings:
+
+Specifies various paths to design files (SDC, LEF), clock parameters, cell padding/exclusion rules, and more. It demonstrates how OpenLANE allows for fine-grained control over the ASIC design flow through Tcl configuration.
+
+![31](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l3/Screenshot%202024-07-13%20190148.png)
+
+### SK3 - Lecture4
+
+#### OpenLANE Git: Your Gateway to Open-Source ASIC Design
+
+Key Repositories:
+
+1. Main OpenLANE Repository:
+
+        URL: https://github.com/The-OpenROAD-Project/OpenLANE
+   
+This is the central hub for OpenLANE, containing the core infrastructure, scripts, flow configurations, and documentation.
+
+2. Skywater PDK (Sky130):
+
+        URL: https://github.com/google/skywater-pdk
+   
+This repository hosts the Google-sponsored Skywater 130nm Process Design Kit (PDK), often used with OpenLANE.
+
+Other PDK Repositories: You can find PDKs from other foundries on GitHub or other platforms.
+
+Common Git Commands for OpenLANE:
+
+```git clone:``` Download a copy of the OpenLANE or PDK repository to your local machine.
+
+```git pull:``` Update your local repository with the latest changes from the remote repository.
+
+```git checkout:``` Switch between different branches or versions of the code.
+
+```git diff:``` View the changes you've made to files.
+
+```git add, git commit, git push:``` Stage, commit, and push your changes to a remote repository (e.g., on GitHub).
+
+
 
 
 
