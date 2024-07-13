@@ -212,3 +212,95 @@ Static timing analysis and physical verification are essential steps to ensure d
 ![19](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Screenshot%202024-07-13%20150323.png)
 ![20](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Screenshot%202024-07-13%20150403.png)
 ![21](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Screenshot%202024-07-13%20150414.png)
+
+### SK3 - Lecture1
+#### Understanding OPENLANE Directory Structure
+
+Open the LINUX Terminal (By default we are in home directory)
+
+Important LINUX Commands
+cd : It is used to change the current working directory.
+
+ls : It lists the contents of a directory.
+
+ls -ltr : It lists the contents of a directory in long format, sorted by modification time in reverse order (oldest first).
+
+ls --help: It displays a help message with a list of options and usage information for the "ls" command. Note : You can give any command name and then type "--help" to get info about that command.
+
+clear: It clears the terminal screen.
+
+Now, we go to the work directory where all files related to the workshop are stored
+
+
+``
+cd Desktop
+``
+
+``
+cd work/tools/
+``
+
+``
+cd openlane_working_dir/
+``
+
+``
+cd openlane/
+``
+
+Important Files and Directories:
+
+     pdks: It is known as Process Design Kit. For this workshop we are using an opensource pdk i.e 'skywater 130nm pdk'. OPENLANE is built around this 'skywater 130nm pdk'.
+      - skywater-pdk : This has all the pdk related files such as timing libraries, Lef files etc.
+      - open_pdks : It contains set of scripts & files that converts the foundary level pdks to be compatible with the open source EDA Tools.
+      - sky130A : It is a pdk variant , already made compatible with the open source EDA tools.
+      - libs.ref: It contains files specific to the technology such as design libraries, standard cells and many more.
+      - libs.tech: It contains files specific to the Tools.
+![22](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l1/Screenshot%202024-07-13%20152530.png)
+![23](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l1/Screenshot%202024-07-13%20152617.png)
+![24](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l1/Screenshot%202024-07-13%20160052.png)
+
+### SK3 - Lecture2
+
+#### Design Preparation Step
+
+To enter into bash while being in the openalne dircetory use the command
+
+    docker
+Now after this we use the script 'flow.tcl' and alongwith it use '-interactive' for the step by step openlane flow. :
+
+    ./flow.tcl -interactive
+    
+Openlane Logo can be seen in the terminal which is affirmative , after this enter the following command to install require openlane packages
+
+    % package require openlane 0.9
+    
+Now, Ther are various pre-built designs in the 'designs' subdirectory. So, here we are selecting the "picorv32a.v" design on which we will execute the RTL to GDS flow. To carry out the synthesis (the project's initial stage) on this design, we first need to set it up using the command:
+
+    prep -design picorv32a
+  
+After the preparation is complete, we can see a new directory with todays date is created within 'runs' folder in 'picorv32a' folder.
+
+![]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
