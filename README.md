@@ -131,3 +131,84 @@ These screenshot demonstrate the essential steps and considerations in taking an
 ![12](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l2/Capture3.PNG)
 ![13](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l2/Capture4.PNG)
 
+### SK2 - Lecture3
+
+#### Exploring the striVe SoC Family
+
+Key Components:
+
+striVe SoC Family (Left): Indicates that this is a collection of related SoCs, each with a distinct version number (striVe, striVe 2, striVe 2a, etc.).
+
+Table (Top Right): Provides a concise overview of the features and key components of each striVe variant:
+
+   SoC: The name of each SoC version.
+   Features: A description of the SoC's architecture, including the fabrication process node (Sky130 SCL), the amount of integrated SRAM, and the inclusion of OpenRAM blocks.
+    
+Example: striVe 2a utilizes the Sky130 130nm process and features the striVe 2 core with a single-chip core module.
+
+Chip Layouts (Bottom): Displays the actual physical layouts of several striVe SoCs:
+
+  Each layout reveals the arrangement of different functional blocks on the silicon die (e.g., CPU, memory, peripherals).
+  The increasing complexity of layouts from striVe to striVe5 visually demonstrates the evolution of the SoC family over time.
+  
+Project Partners (Bottom):
+    SkyWater Technology Foundry, Google, OpenROAD, and Efabless indicates their collaboration and contributions to the striVe project. 
+Key Takeaways:
+  1. The striVe SoC family represents a series of increasingly capable open-source SoCs built using the Sky130 process node.
+  2. The diverse configurations and features of each variant demonstrate the flexibility and customization possibilities offered by open-source hardware design.
+  3. The project's collaborative nature, involving leading organizations, highlights the growing ecosystem and support for open-source chip development.
+
+![15](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l3/Capture.PNG)
+
+### SK2 - Lecture4
+
+#### Navigating the OpenLANE ASIC Flow and Addressing Antenna Violations
+
+Slide 1 (OpenLANE ASIC Flow):
+
+Illustrates the comprehensive OpenLANE flow, encompassing design exploration, physical implementation, and sign-off. Key stages include:
+
+1. RTL Synthesis: Converting Register Transfer Level (RTL) code into a gate-level netlist.
+2. Floorplanning & Placement: Planning the chip layout and placing standard cells.
+3. CTS & Routing: Clock Tree Synthesis and interconnecting placed cells with metal layers.
+4. Static Timing Analysis (STA): Verifying timing closure.
+5. Physical Verification: Ensuring design rule compliance (DRC) and layout vs. schematic (LVS) correctness.
+
+Slide 2 & 3 (Dealing with Antenna Rules Violations):
+The Problem: Metal wires on a chip can act as antennas during fabrication (reactive ion etching) hence Charge accumulation on these "antennas" can damage underlying transistor gates.
+
+Solutions:
+
+Bridging: Connecting the antenna wire to a higher metal layer (requires router awareness).
+
+Antenna Diodes: Adding special diode cells from the Standard Cell Library (SCL) to provide a discharge path.
+
+OpenLANE's Approach (Slide 4):
+
+1. Preventive: Fake antenna diodes are placed next to cell inputs after placement.
+2. Verification: An antenna checker tool (Magic) is run on the routed layout.
+3. Remediation: Fake diodes are replaced with real ones if a violation is detected.
+
+Slide 5 (Static Timing Analysis):
+
+Emphasizes the use of OpenSTA (from OpenROAD) for Static Timing Analysis.
+Shows an example report with timing paths, delays, and slack (timing margin).
+
+Slide 6 (Physical Verification):
+
+Highlights the use of Magic for: 
+1. Design Rules Checking (DRC): Ensures the layout complies with manufacturing rules.
+2. SPICE Extraction: Extracts a circuit representation from the layout for simulation.
+3. Layout vs. Schematic (LVS): Verifies that the layout matches the intended circuit connectivity.
+ 
+Key Takeaways:
+OpenLANE provides a robust and automated ASIC design flow.
+Antenna violations are common in chip design and require careful handling.
+OpenLANE employs a preventive and verification-based approach to address antenna issues.
+Static timing analysis and physical verification are essential steps to ensure design functionality and manufacturability.
+![16](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Capture.PNG)
+![17](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Capture1.PNG)
+![18](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Capture2.PNG)
+![19](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Screenshot%202024-07-13%20150323.png)
+![20](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Screenshot%202024-07-13%20150403.png)
+![21](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk2/sky_l4/Screenshot%202024-07-13%20150414.png)
