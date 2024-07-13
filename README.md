@@ -1,4 +1,7 @@
 # Nasscom-VSD-vlsi
+
+This repository consists of a 5 Day workshop Elaborated through a readme file . The were conducted by NASSCOM and VSD on SOC Design and Planning this also includes all the 5 Days learning from videos provided by VSD and LAB work on the OpenLANE tool provided by NASSCOM.
+
 ## DAY-1
 ### SK1- Lecture1
 
