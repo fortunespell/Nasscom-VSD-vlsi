@@ -248,14 +248,23 @@ cd openlane_working_dir/
 cd openlane/
 ``
 
+The ls -ltr command lists the contents of directories, revealing:
+
+PDK Options: Initially, we see options for different PDKs (pdks and openlane_old).
+
+Skywater PDK Contents: Inside skywater-pdk, we find various subdirectories:
+1. sky130A: Likely contains data specific to the Skywater 130nm process node. third_party, scripts, src: Folders suggesting external dependencies, utility scripts, and source code respectively.
+3. docs, examples: Likely contain documentation and usage examples.
+4. Open-Source Components: The presence of folders like aes_cipher, usb_cdc_core, sha3 suggests the inclusion of open-source IP cores for common functionalities.
+
 Important Files and Directories:
 
-     pdks: It is known as Process Design Kit. For this workshop we are using an opensource pdk i.e 'skywater 130nm pdk'. OPENLANE is built around this 'skywater 130nm pdk'.
-      - skywater-pdk : This has all the pdk related files such as timing libraries, Lef files etc.
-      - open_pdks : It contains set of scripts & files that converts the foundary level pdks to be compatible with the open source EDA Tools.
-      - sky130A : It is a pdk variant , already made compatible with the open source EDA tools.
-      - libs.ref: It contains files specific to the technology such as design libraries, standard cells and many more.
-      - libs.tech: It contains files specific to the Tools.
+       pdks: It is known as Process Design Kit. For this workshop we are using an opensource pdk i.e 'skywater 130nm pdk'. OPENLANE is built around this 'skywater 130nm pdk'.
+        - skywater-pdk : This has all the pdk related files such as timing libraries, Lef files etc.
+        - open_pdks : It contains set of scripts & files that converts the foundary level pdks to be compatible with the open source EDA Tools.
+        - sky130A : It is a pdk variant , already made compatible with the open source EDA tools.
+        - libs.ref: It contains files specific to the technology such as design libraries, standard cells and many more.
+        - libs.tech: It contains files specific to the Tools.
 ![22](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l1/Screenshot%202024-07-13%20152530.png)
 ![23](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l1/Screenshot%202024-07-13%20152617.png)
 ![24](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l1/Screenshot%202024-07-13%20160052.png)
