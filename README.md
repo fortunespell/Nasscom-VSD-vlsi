@@ -276,9 +276,12 @@ Important Files and Directories:
 To enter into bash while being in the openalne dircetory use the command
 
     docker
+    
 Now after this we use the script 'flow.tcl' and alongwith it use '-interactive' for the step by step openlane flow. :
 
     ./flow.tcl -interactive
+    
+![25](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20160109.png)    
     
 Openlane Logo can be seen in the terminal which is affirmative , after this enter the following command to install require openlane packages
 
@@ -287,10 +290,71 @@ Openlane Logo can be seen in the terminal which is affirmative , after this ente
 Now, Ther are various pre-built designs in the 'designs' subdirectory. So, here we are selecting the "picorv32a.v" design on which we will execute the RTL to GDS flow. To carry out the synthesis (the project's initial stage) on this design, we first need to set it up using the command:
 
     prep -design picorv32a
-  
+    
+![26](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20162118.png)
+
 After the preparation is complete, we can see a new directory with todays date is created within 'runs' folder in 'picorv32a' folder.
 
-![]()
+#### Key Sections and Variables:
+Design Setup:
+
+1. Design
+ 
+       set ::env(DESIGN_NAME) "picorv32a"
+       set ::env(VERILOG_FILES)  "~/designs/picorv32a/src/picorv32a.v" 
+       set ::env(SDC_FILE) "~/designs/picorv32a/src/picorv32a.sdc"
+   
+DESIGN_NAME: Sets the design's name to picorv32a.
+
+VERILOG_FILES: Specifies the path to the Verilog file containing the picorv32a design.
+
+SDC_FILE: Indicates the path to the Synopsys Design Constraints (SDC) file, which contains timing constraints for the design.
+
+2. Clock Configuration:
+
+        set ::env(CLOCK_PERIOD)  "5.000"
+        set ::env(CLOCK_PORT) "clk"
+        set ::env(CLOCK_NET)  $::env(CLOCK_PORT)
+
+CLOCK_PERIOD: Defines the desired clock period for the design as 5 nanoseconds.
+
+CLOCK_PORT: Sets the name of the clock input port to clk.
+
+CLOCK_NET: Assigns the clock net to be the same as the clock port.
+
+3. Configuration File Inclusion:
+
+        set filename $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/$::env(PDK)/$::env(STD_CELL_LIBRARY)_config.tcl 
+          if {[file exists $filename] == 1} {
+            source $filename
+              }
+
+This section constructs a filename based on environment variables to include a technology-specific configuration file.
+
+It sources (includes) this file if it exists, potentially containing PDK-specific settings.
+
+![27](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20160719.png)
+
+
+4. Standard Cell Library (SCL) Configurations:
+
+SCL Configs
+
+    set ::env(GLB_RT_ADJUSTMENT) 0.1
+    set ::env(SYNTH_MAX_FANOUT) 6
+    set ::env(CLOCK_PERIOD) "24.73"
+    set ::env(FP_CORE_UTIL) 35
+    set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
+
+This part defines various configuration parameters for the standard cell library being used:
+
+    GLB_RT_ADJUSTMENT: Global routing tree adjustment.
+    SYNTH_MAX_FANOUT: Maximum fanout allowed during synthesis.
+    CLOCK_PERIOD: Overwrites the previous clock period setting.
+    FP_CORE_UTIL: Specifies core utilization for floorplanning.
+    PL_TARGET_DENSITY: Sets the target density for placement.
+    
+![28](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20161133.png)
 
 
 
