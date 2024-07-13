@@ -437,10 +437,45 @@ Common Git Commands for OpenLANE:
 ```git add, git commit, git push:``` Stage, commit, and push your changes to a remote repository (e.g., on GitHub).
 
 
+### SK3 - Lecture5
 
+#### OpenLANE Results Analysis: Cell Counts/Flop calculation and Directory Exploration
 
+Screenshot 1 (Directory Navigation and Files):
 
+Results Directory: The user navigates to the synthesis subdirectory within the OpenLANE run's results folder: .../openlane/designs/picorv32a/runs/13-07_13-33/results/synthesis.
 
+Key Files: 
+```merged_unpadded.lef:``` This Library Exchange Format (LEF) file likely contains the physical layout information for the standard cells used in the design, potentially after merging multiple libraries.
+
+```picorv32a.synthesis.v:``` Represents the synthesized netlist of the picorv32a design in Verilog format. This netlist is the output of the synthesis stage, mapping the original RTL design to the chosen standard cells.
+
+![32](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l5/Screenshot%202024-07-13%20191251.png)
+
+Screenshot 2 (Design Statistics):
+
+Cell Counts: The output highlights the count of different standard cells used in the design, grouped by cell type (e.g., sky130_fd_sc_hd_a211o_2, sky130_fd_sc_hd_a21bo_2).
+
+    Area Estimation: Different cells have varying sizes, so cell counts provide an initial estimate of the design's area.
+    Performance Analysis: Cell complexity influences timing characteristics; analyzing cell types helps understand potential performance bottlenecks.
+
+Now, coming back to the step where design preperation was completed successfully. Now, To perform synthesis on the design use the following command :
+
+      % run_synthesis
+      
+Now, First objective after the synthesis is completed is to calculate the Flip Flop Ratio.
+
+Now, if we see the synthesized results we find:
+
+    Number of D Flipflops : 1613
+    Total number of Cells : 14876
+
+![32](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l5/Screenshot%202024-07-13%20191025.png)
+
+    FF Ratio : 0.1084
+    FF Percentage : 10.84 %
+
+Hence, flip flop ratio = (Number of D Flipflops)/(Total number of Cells) Flipflop percentage = FF ratio * 100
 
 
 
