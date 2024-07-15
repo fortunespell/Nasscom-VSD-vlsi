@@ -557,12 +557,72 @@ Signal flow and interconnections between IPs.
 Power distribution and optimization.
 Timing constraints and clock distribution.
 
+### SK1- Lecture3
+#### Power Integrity in ASIC Design: Addressing Voltage Drop and Noise Margin with Decoupling Capacitors
 
+Slide 1 (Pre-Placed Cells and Floorplan):
+Sets the context of floorplanning, where pre-placed cells (representing IP blocks or macro cells) are positioned on the chip die.
+This arrangement influences how power is distributed to different parts of the circuit.
+Slide 2 & 3 (Voltage Drop Problem):
+Switching Current: Emphasizes that complex circuits draw significant current during switching operations.
+Parasitic Resistance (Rdd, Ldd): Highlights the presence of parasitic resistance and inductance in power supply lines.
+Voltage Drop: Shows that due to these parasitics, the actual voltage (Vad) at a circuit node can be lower than the intended supply voltage (Vdd), especially during high current demands.
+Logic Errors: Explains that if Vad falls below a critical threshold (noise margin), logic signals might be misinterpreted, leading to circuit malfunction.
+Slide 4 (Noise Margin Summary):
+Noise Margin (NM): Defines noise margin as the allowed voltage variation for a logic signal to be reliably interpreted as '0' or '1'.
+Bump Characteristics: Illustrates how voltage bumps induced by switching currents can lead to violations of noise margins, causing logic errors.
+Slide 5 (Solution: Decoupling Capacitors):
+Decoupling Capacitor (Cd): Introduces decoupling capacitors as the solution, placed in parallel with the circuit's power supply pins.
+Charge Reservoir: Explains that decoupling capacitors act as local charge reservoirs, supplying current during switching transients and minimizing voltage drops.
+Slide 6 (Decoupling Capacitors in Floorplan):
+Demonstrates the placement of decoupling capacitor blocks (DECAP) near pre-placed cells in the floorplan.
+This strategic placement ensures that decoupling capacitors are close to the circuits they protect, reducing the effective inductance and improving their effectiveness.
 
+### SK1- Lecture4
+#### Power Integrity in ASICs: The Importance of Power Planning and Grid Design
 
+Slide 1 (Circuit with a 16-bit Bus):
+Introduces a circuit with driver cells, load cells, decoupling capacitors (Cd), and a highlighted 16-bit bus (blue).
+This setup represents a common scenario in ASICs where data is transmitted over buses, and multiple cells share power and ground rails.
+Slide 2 & 3 (Ground Bounce & Voltage Droop):
+Simultaneous Switching: Illustrates the case when multiple bits on the bus switch from '1' (V) to '0' (0) simultaneously.
+Ground Bounce:
+The capacitors connected to the switching bits discharge rapidly through the shared ground (Vss) connection.
+This sudden current surge through the ground path creates a voltage bump or "bounce" on the ground rail, potentially affecting other circuits sharing the same ground.
+Voltage Droop:
+Similarly, when many bits switch from '0' to '1', a large current is drawn from the power supply (Vdd).
+This simultaneous current demand can cause the Vdd rail to momentarily dip or "droop" due to the resistance in the power supply network.
+Slide 4 (Power Grid Illustration):
+Shows a more detailed view of how power (Vdd) and ground (Vss) are distributed using a grid structure in an ASIC layout.
+The grid ensures that power and ground are supplied consistently to all parts of the chip, reducing the impact of localized voltage drops and ground bounces.
+Slide 5 (Power Planning):
+Highlights power planning as a crucial step in ASIC design, involving the strategic placement of:
+Power/Ground Grid: Creating a robust network of Vdd and Vss interconnections.
+Decoupling Capacitors (DECAP): Placing sufficient decoupling capacitors close to circuits to provide local charge storage and further minimize voltage fluctuations.
 
+### SK1- Lecture5 
+#### From Netlist to Floorplan: Preparing for Placement & Routing in ASIC Design
 
-
+These slides illustrate a crucial step in the ASIC design flow: transitioning from a logical netlist representation to a physical floorplan, setting the stage for placement and routing.
+Slide 1 (Complete Design Netlist):
+Circuit Diagram: Depicts a complete digital circuit comprising:
+Flip-flops (FF1, FF2)
+Combinational logic blocks (Block a, Block b, Block c)
+Input/Output pins (Din1-Din4, Dout1-Dout4, Clk1, Clk2, ClkOut)
+Netlist Concept:
+Emphasizes that this circuit's connectivity is captured in a netlist, a textual description using hardware description languages (HDL) like Verilog or VHDL.
+The netlist defines how different circuit elements are interconnected but doesn't specify their physical locations.
+Slide 2 (Logical Cell Placement Blockage):
+Floorplan Grid: Shows a chip floorplan with a power grid (Vdd, Vss) and predefined areas for:
+DECAP (Decoupling Capacitors): Essential for power integrity.
+Blocks a, b, c: Representing the pre-placed logical blocks from the netlist.
+Logical Placement:
+The logical blocks are assigned specific regions on the floorplan, but their exact internal cell placement is not yet defined.
+This placement considers factors like signal flow, inter-block connections, and potential congestion.
+Ready for Placement & Routing:
+The slide highlights that this floorplan, with pre-placed blocks and a power grid, serves as the starting point for the next stage:
+Placement: Individual standard cells within each logical block will be assigned precise locations on the chip.
+Routing: Metal interconnections will be routed between the placed cells to realize the connections defined in the netlist.
 
 
 
