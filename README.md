@@ -482,27 +482,27 @@ Hence, flip flop ratio = (Number of D Flipflops)/(Total number of Cells) Flipflo
 #### Understanding Chip Area, Core, Die, and Utilization Factor
 This series of diagrams provides a visual explanation of key concepts related to chip design, focusing on the core, die, utilization factor, and aspect ratio. 
 
-Slide 1: Determining Core Dimensions and Utilization
+#### Slide 1: Determining Core Dimensions and Utilization
 
-  Explains that the core's dimensions are determined by the placement of all logic cells within it.
+  1. Explains that the core's dimensions are determined by the placement of all logic cells within it.
 
-  100% utilization occurs when all logic cells completely fill the core area.
+  2. 100% utilization occurs when all logic cells completely fill the core area.
 
-  The utilization factor is calculated by comparing the area occupied by cells to the total core area.
+  3. The utilization factor is calculated by comparing the area occupied by cells to the total core area.
 
-Slide 2: Core and Die in Context
+#### Slide 2: Core and Die in Context
 
-  Shows how multiple dies are fabricated on a single silicon wafer.
+  1. Shows how multiple dies are fabricated on a single silicon wafer.
 
-  Emphasizes that the die is a discrete unit containing the core, and many dies form a wafer.
+  2. Emphasizes that the die is a discrete unit containing the core, and many dies form a wafer.
 
-Slide 3: Standard Cell Area
+#### Slide 3: Standard Cell Area
 
-  Illustrates that each standard cell (e.g., flip-flop) occupies a specific area within the core.
+  1. Illustrates that each standard cell (e.g., flip-flop) occupies a specific area within the core.
 
-  The area of these cells contributes to the overall core area, ultimately impacting utilization and die size.
+  2. The area of these cells contributes to the overall core area, ultimately impacting utilization and die size.
 
-Slide 4: Ideal Scenario - 100% Utilization
+#### Slide 4: Ideal Scenario - 100% Utilization
 
   1. Core: The active area of the chip containing standard cells (logic gates, flip-flops) that implement the design's functionality.
   2. Die: The small piece of semiconductor material (usually silicon) on which the core is fabricated.
@@ -512,12 +512,12 @@ Slide 4: Ideal Scenario - 100% Utilization
  
   4. Aspect Ratio: Here, the core's height and width are equal, leading to an aspect ratio of 1 (Height / Width).
 
-Slide 5: Realistic Scenario - 50% Utilization
+#### Slide 5: Realistic Scenario - 50% Utilization
 
     Utilization Factor = 0.5: Only half of the die area is used by the core.
     Aspect Ratio = 0.5: The core's height is half its width.
     
-  Empty Space: The unused area on the die can accommodate additional circuitry, interconnections, or remain empty depending on the design and cost considerations.
+Empty Space: The unused area on the die can accommodate additional circuitry, interconnections, or remain empty depending on the design and cost considerations.
 
 
 
