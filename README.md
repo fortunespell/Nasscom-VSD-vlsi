@@ -788,7 +788,7 @@ Screenshot 1 (Placement Statistics):
 3. Cell Counts: Numbers of different cell instances and total instances.
 4. Placement Metrics: Data related to cell displacement, wirelength, and HPWL (Half-Perimeter Wirelength), which are indicators of placement quality.
 
-`` run_floorplan ``
+`` run_placement ``
 
 ![64](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20175722.jpg)
 
@@ -820,6 +820,8 @@ Standard Cells: The rectangles likely represent individual standard cell instanc
 Labels: Some cells have labels indicating their types or functions (e.g., _19458, _19321).
 Routing Tracks: Faint lines in the background might represent the available routing tracks for interconnecting the cells.
 
+![67](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20182128.jpg)
+
 for more controls use these commands:
 
     # Design Alignment Instructions
@@ -841,13 +843,51 @@ for more controls use these commands:
     2. Press `S` to select the cell.
     3. In the `tkcon` window, enter the command `what` to display cell details.
 
-![67](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20182128.jpg)
+## Day 3
+### SK1- Lecture0 (LAB)
+
+#### Configuring Parameters and Visualizing Results
+
+This set of screenshots demonstrates how floorplanning parameters can be customized in OpenLANE using Tcl variables and how the resulting floorplan is visualized for a picorv32a design.
+
+Screenshot 1 (Floorplan Configuration):
+
+Tcl Variables: Shows a section of a Tcl configuration file (config.tcl or similar) dedicated to floorplanning settings.
+
+Key Parameters:
+
+1. FP_IO_VMETAL, FP_IO_HMETAL: Specify metal layers for vertical and horizontal IO connections.
+2. FP_SIZING, FP_CORE_UTIL, FP_ASPECT_RATIO: Control overall floorplan sizing, core utilization, and aspect ratio.
+3. FP_PDN_* variables: Define parameters related to the power distribution network (PDN) like offsets, pitches, and adjustments.
+4. FP_IO_MODE, FP_IO_HLENGTH, etc.: Configure input/output (IO) placement parameters.
+
+![68](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-15%20192134.jpg)
 
 
+Screenshot 2 (Running Floorplan and Visualization):
 
+OpenLANE Log: The terminal displays log messages from an OpenLANE run.
 
+Floorplan Execution: Highlights the execution of the``run_floorplan``, indicating the start of the floorplanning stage.
 
+Layout Visualization: Shows OpenLANE invoking a layout viewer (klayout in this case) to display the generated floorplan.
 
+    set  ::env(FP_IO_MODE) 2
+    run_floorplan
+
+![69](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-15%20192348.jpg)
+
+Screenshot 3 (Floorplan Visualization):
+
+1. Layout Viewer Display: Presents the visualized floorplan within the layout viewer.
+2. Core Area: A central rectangular area represents the core of the design where standard cells are placed.
+3. IO Pads: There might be regions around the core dedicated to IO pads for external connections.
+4. Power Grid: A grid-like structure might be visible, indicating the power distribution network.
+
+Here the IO Pin arrangement is changed now to 2
+previouly it was set to 1 as default and was divided in equal manner
+
+![70](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-16%20001813.jpg)
 
 
 
