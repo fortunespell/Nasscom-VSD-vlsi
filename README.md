@@ -490,17 +490,23 @@ This series of diagrams provides a visual explanation of key concepts related to
 
   3. The utilization factor is calculated by comparing the area occupied by cells to the total core area.
 
+![33](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l1/Screenshot%202024-07-14%20185039.jpg)
+
 #### Slide 2: Core and Die in Context
 
   1. Shows how multiple dies are fabricated on a single silicon wafer.
 
   2. Emphasizes that the die is a discrete unit containing the core, and many dies form a wafer.
 
+![34](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l1/Screenshot%202024-07-14%20185715.jpg)
+
 #### Slide 3: Standard Cell Area
 
   1. Illustrates that each standard cell (e.g., flip-flop) occupies a specific area within the core.
 
   2. The area of these cells contributes to the overall core area, ultimately impacting utilization and die size.
+
+![35](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l1/Screenshot%202024-07-14%20185900.jpg)
 
 #### Slide 4: Ideal Scenario - 100% Utilization
 
@@ -512,6 +518,8 @@ This series of diagrams provides a visual explanation of key concepts related to
  
   4. Aspect Ratio: Here, the core's height and width are equal, leading to an aspect ratio of 1 (Height / Width).
 
+![36](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l1/Screenshot%202024-07-14%20190020.jpg)
+
 #### Slide 5: Realistic Scenario - 50% Utilization
 
     Utilization Factor = 0.5: Only half of the die area is used by the core.
@@ -519,11 +527,35 @@ This series of diagrams provides a visual explanation of key concepts related to
     
 Empty Space: The unused area on the die can accommodate additional circuitry, interconnections, or remain empty depending on the design and cost considerations.
 
+![37](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l1/Screenshot%202024-07-14%20190124.jpg)
 
+### SK1- Lecture2
+#### Understanding Pre-Placed Cells and Floorplanning
 
+Slide 1 (Defining Locations of Preplaced Cells):
 
+1. Logic: Starts with an example of a simple combinational logic circuit.
 
+2. Pre-Placement: The logic gates (A1-A8) are arranged in a specific topology, and vertical cut lines (cut1, cut2) indicate potential divisions within the circuit.
 
+3. Block Creation: The circuit is partitioned into two blocks (Block 1 and Block 2) based on the cut lines.
+
+Slide 2 (Blackboxing and IP Creation):
+
+Blackboxing: The individual blocks are encapsulated as "black boxes," hiding their internal details while exposing their input/output connections.
+IP (Intellectual Property) Creation: These black boxes represent reusable design modules, often referred to as IPs. Each block becomes an independent unit with defined inputs, outputs, and functionality.
+Slide 3 (Examples of Pre-Placed IPs and Floorplanning):
+Common IPs: The slide showcases examples of common pre-designed IPs, including:
+Memory
+Clock Gating Cell
+Comparator
+Multiplexer (Mux)
+Floorplanning:
+These IPs are strategically placed within the chip's layout before the automated placement and routing stages.
+This pre-placement, known as floorplanning, considers factors like:
+Signal flow and interconnections between IPs.
+Power distribution and optimization.
+Timing constraints and clock distribution.
 
 
 
