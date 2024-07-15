@@ -540,11 +540,13 @@ Slide 1 (Defining Locations of Preplaced Cells):
 2. Pre-Placement: The logic gates (A1-A8) are arranged in a specific topology, and vertical cut lines (cut1, cut2) indicate potential divisions within the circuit.
 
 3. Block Creation: The circuit is partitioned into two blocks (Block 1 and Block 2) based on the cut lines.
-
+![38]
 Slide 2 (Blackboxing and IP Creation):
 
 Blackboxing: The individual blocks are encapsulated as "black boxes," hiding their internal details while exposing their input/output connections.
 IP (Intellectual Property) Creation: These black boxes represent reusable design modules, often referred to as IPs. Each block becomes an independent unit with defined inputs, outputs, and functionality.
+
+![39]
 Slide 3 (Examples of Pre-Placed IPs and Floorplanning):
 Common IPs: The slide showcases examples of common pre-designed IPs, including:
 Memory
@@ -557,34 +559,44 @@ This pre-placement, known as floorplanning, considers factors like:
 Signal flow and interconnections between IPs.
 Power distribution and optimization.
 Timing constraints and clock distribution.
-
+![40]
 ### SK1- Lecture3
 #### Power Integrity in ASIC Design: Addressing Voltage Drop and Noise Margin with Decoupling Capacitors
 
 Slide 1 (Pre-Placed Cells and Floorplan):
 Sets the context of floorplanning, where pre-placed cells (representing IP blocks or macro cells) are positioned on the chip die.
 This arrangement influences how power is distributed to different parts of the circuit.
+
+![41]
 Slide 2 & 3 (Voltage Drop Problem):
 Switching Current: Emphasizes that complex circuits draw significant current during switching operations.
 Parasitic Resistance (Rdd, Ldd): Highlights the presence of parasitic resistance and inductance in power supply lines.
 Voltage Drop: Shows that due to these parasitics, the actual voltage (Vad) at a circuit node can be lower than the intended supply voltage (Vdd), especially during high current demands.
 Logic Errors: Explains that if Vad falls below a critical threshold (noise margin), logic signals might be misinterpreted, leading to circuit malfunction.
+
+![42]
+![43]
 Slide 4 (Noise Margin Summary):
 Noise Margin (NM): Defines noise margin as the allowed voltage variation for a logic signal to be reliably interpreted as '0' or '1'.
 Bump Characteristics: Illustrates how voltage bumps induced by switching currents can lead to violations of noise margins, causing logic errors.
+![44]
 Slide 5 (Solution: Decoupling Capacitors):
 Decoupling Capacitor (Cd): Introduces decoupling capacitors as the solution, placed in parallel with the circuit's power supply pins.
 Charge Reservoir: Explains that decoupling capacitors act as local charge reservoirs, supplying current during switching transients and minimizing voltage drops.
+
+![45]
 Slide 6 (Decoupling Capacitors in Floorplan):
 Demonstrates the placement of decoupling capacitor blocks (DECAP) near pre-placed cells in the floorplan.
 This strategic placement ensures that decoupling capacitors are close to the circuits they protect, reducing the effective inductance and improving their effectiveness.
-
+![46]
 ### SK1- Lecture4
 #### Power Integrity in ASICs: The Importance of Power Planning and Grid Design
 
 Slide 1 (Circuit with a 16-bit Bus):
 Introduces a circuit with driver cells, load cells, decoupling capacitors (Cd), and a highlighted 16-bit bus (blue).
 This setup represents a common scenario in ASICs where data is transmitted over buses, and multiple cells share power and ground rails.
+
+![47]
 Slide 2 & 3 (Ground Bounce & Voltage Droop):
 Simultaneous Switching: Illustrates the case when multiple bits on the bus switch from '1' (V) to '0' (0) simultaneously.
 Ground Bounce:
@@ -593,14 +605,19 @@ This sudden current surge through the ground path creates a voltage bump or "bou
 Voltage Droop:
 Similarly, when many bits switch from '0' to '1', a large current is drawn from the power supply (Vdd).
 This simultaneous current demand can cause the Vdd rail to momentarily dip or "droop" due to the resistance in the power supply network.
+
+![48]
+![49]
 Slide 4 (Power Grid Illustration):
 Shows a more detailed view of how power (Vdd) and ground (Vss) are distributed using a grid structure in an ASIC layout.
 The grid ensures that power and ground are supplied consistently to all parts of the chip, reducing the impact of localized voltage drops and ground bounces.
+
+![50]
 Slide 5 (Power Planning):
 Highlights power planning as a crucial step in ASIC design, involving the strategic placement of:
 Power/Ground Grid: Creating a robust network of Vdd and Vss interconnections.
 Decoupling Capacitors (DECAP): Placing sufficient decoupling capacitors close to circuits to provide local charge storage and further minimize voltage fluctuations.
-
+![51]
 ### SK1- Lecture5 
 #### From Netlist to Floorplan: Preparing for Placement & Routing in ASIC Design
 
@@ -613,6 +630,8 @@ Input/Output pins (Din1-Din4, Dout1-Dout4, Clk1, Clk2, ClkOut)
 Netlist Concept:
 Emphasizes that this circuit's connectivity is captured in a netlist, a textual description using hardware description languages (HDL) like Verilog or VHDL.
 The netlist defines how different circuit elements are interconnected but doesn't specify their physical locations.
+![52]
+
 Slide 2 (Logical Cell Placement Blockage):
 Floorplan Grid: Shows a chip floorplan with a power grid (Vdd, Vss) and predefined areas for:
 DECAP (Decoupling Capacitors): Essential for power integrity.
@@ -624,6 +643,127 @@ Ready for Placement & Routing:
 The slide highlights that this floorplan, with pre-placed blocks and a power grid, serves as the starting point for the next stage:
 Placement: Individual standard cells within each logical block will be assigned precise locations on the chip.
 Routing: Metal interconnections will be routed between the placed cells to realize the connections defined in the netlist.
+![53]
+### SK1- Lecture6 (LAB)
+
+#### OpenLANE Configuration and Execution: Defining Variables and Observing the Flow
+
+Screenshot 1 (Configuration Variables):
+
+Configuration File (config.tcl): This snippet showcases a portion of OpenLANE's configuration file where essential design parameters are defined.
+
+Required Variables: It highlights "required variables" crucial for a successful run.
+
+1. DESIGN_NAME: Specifies the top-level module name of your design.
+
+2. VERILOG_FILES: Provides the path(s) to your Verilog design files.
+
+3. CLOCK_PERIOD: Defines the clock period in nanoseconds.
+
+4. CLOCK_NET and CLOCK_PORT: Specify clock-related information used in different stages (CTS, STA).
+
+![54](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l6-lab/Screenshot%202024-07-15%20161206.jpg)
+
+Screenshot 2 (Configuration Directory):
+
+OpenLANE Configuration Directory: Shows the contents of OpenLANE's configuration directory.
+
+Tcl Scripts for Different Stages: The directory contains individual Tcl scripts (synthesis.tcl, placement.tcl, routing.tcl, etc.) that define the flow for each design stage.
+
+![55](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l6-lab/Screenshot%202024-07-15%20161414.jpg)
+
+Screenshot 3 (Log Messages):
+
+OpenLANE Execution Log: Displays log messages produced during an OpenLANE run.
+
+Key Information:
+
+Successful G-matrix creation (used in power grid analysis).
+
+Pin generation completion.
+
+Floorplan conversion: A layout file (...floorplan.tcl) is being transformed into a DEF (Design Exchange Format) file (...floorplan.def).
+
+![56](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l6-lab/Screenshot%202024-07-15%20163133.jpg)
+
+### SK1- Lecture7 (LAB)
+
+#### OpenLANE Design Flow: Navigating Directories, Examining Floorplan Data, and Visualizing Layout
+
+Screenshot 1-2 (Project Directory Exploration):
+
+The user navigates through various directories within an OpenLANE project, ultimately reaching:
+
+A specific run directory:
+
+              .../openlane/designs/picorv32a/runs/15-07_10-57
+
+The results/floorplan subdirectory containing output files from the floorplanning stage.
+
+Key Subdirectories:
+
+1. PDK_SOURCES: Holds links to the Skywater PDK files used in the design.
+2. results: Stores outputs from different stages (e.g., synthesis, floorplan, routing).
+3. logs: Contains log files for each stage's execution.
+
+![57](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l7-lab/Screenshot%202024-07-15%20163108.jpg)
+![58](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l7-lab/Screenshot%202024-07-15%20163646.jpg)
+
+Screenshot 3 (Floorplan Definition - picorv32a.floorplan.def):
+
+Shows a snippet of the picorv32a.floorplan.def file, a standard DEF (Design Exchange Format) file used to represent the floorplan.
+
+Key Information:
+
+1. VERSION: DEF file version.
+2. DESIGN: The name of the design (picorv32a).
+3. DIEAREA: Specifies the dimensions of the chip's die area.
+4. ROW: Defines the rows available for placing standard cells, with their coordinates, orientation, and spacing.
+
+![59](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l7-lab/Screenshot%202024-07-15%20163748.jpg)
+
+Screenshot 4 (Die Area Calculation):
+
+Calculator to convert the die area dimensions from the DEF file (6606685 x 671405) into units representing microns.
+
+![60](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l7-lab/Screenshot%202024-07-15%20163857.jpg)
+
+Screenshot 5 (Visualizing the Floorplan):
+
+The floorplan is visualized using a layout viewer tool (possibly klayout).
+
+Key Observations:
+
+1. Die Area: The overall rectangular area represents the chip die.
+2. Rows: The repeating vertical lines likely represent the rows defined in the DEF file for cell placement.
+3. Pre-Placed Blocks: There might be (though not clearly visible in this screenshot) rectangular areas representing pre-placed blocks like memories or macro cells.
+
+![61](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l7-lab/Screenshot%202024-07-15%20164728.jpg)
+
+Purpose:
+
+1. Understanding Project Organization: The screenshots guide users through the organization of an OpenLANE project, highlighting the location of key files and results.
+2. Exploring Floorplan Data: Shows the structure and contents of a DEF file, a standard way to represent floorplan information.
+3. Visualizing the Design: Provides a visual representation of the floorplan, aiding in understanding the chip's physical organization and the arrangement of rows for standard cell placement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
