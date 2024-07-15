@@ -290,6 +290,7 @@ Openlane Logo can be seen in the terminal which is affirmative , after this ente
 Now, Ther are various pre-built designs in the 'designs' subdirectory. So, here we are selecting the "picorv32a.v" design on which we will execute the RTL to GDS flow. To carry out the synthesis (the project's initial stage) on this design, we first need to set it up using the command:
 
     prep -design picorv32a
+    run_synthesis
     
 ![26](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d1/d1_sk3/sky_l2/Screenshot%202024-07-13%20162118.png)
 
