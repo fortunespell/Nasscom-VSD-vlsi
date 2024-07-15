@@ -1,4 +1,4 @@
-# Nasscom-VSD-vlsi
+  # Nasscom-VSD-vlsi
 
 This repository consists of a 5 Day workshop Elaborated through a readme file . The were conducted by NASSCOM and VSD on SOC Design and Planning this also includes all the 5 Days learning from videos provided by VSD and LAB work on the OpenLANE tool provided by NASSCOM.
 
@@ -746,12 +746,102 @@ Purpose:
 2. Exploring Floorplan Data: Shows the structure and contents of a DEF file, a standard way to represent floorplan information.
 3. Visualizing the Design: Provides a visual representation of the floorplan, aiding in understanding the chip's physical organization and the arrangement of rows for standard cell placement.
 
+### SK1- Lecture8 (LAB)
 
+#### Exploring Standard Cell Details in a Layout Viewer
 
+Screenshot 1 (Standard Cell Properties):
 
+1. Layout Viewer: The main window displays a section of the ASIC layout.
+2. Tcl Console: The console provides a command-line interface for interacting with the layout data.
+3. Cell Details: The user has likely selected a standard cell, triggering the display of its properties:
+4. Name: The cell is identified as pcpi.
+5. Size: It occupies an area of 8.018 microns x 8.018 microns.
+6. Layers: Information about metal layers (Metal1, Metal2) and their connections to the pcpi cell's pins.
+7. Label Attachment: It shows specific labels ("pcpi_rd/I1") are associated with metal connections to this cell instance.
 
+![62](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l8-lab/Screenshot%202024-07-15%20165243.jpg)
 
+Screenshot 2 (Metal Layers and Labels):
 
+1. Metal Layers: The layout view highlights vertical structures, likely representing Metal2 (pink) and potentially other metal layers.
+2. Label Visibility: Labels for the pcpi cell's pins or internal connections are visible, confirming the information from the console.
+
+![63](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk1/sky_l8-lab/Screenshot%202024-07-15%20165442.jpg)
+
+Purpose:
+
+Standard Cell Structure: Examining the pcpi cell's physical layout, including its size and connections to different metal layers.
+
+Label Verification: Confirming the correct association of labels (e.g., "pcpi_rd/I1") with specific metal traces connected to the pcpi cell.
+
+Connectivity Analysis: Understanding how this cell is connected to the surrounding circuitry through the labeled metal traces.
+
+### SK2- Lecture5 (LAB)
+
+#### OpenLANE Design Flow: Placement Statistics, Directory Organization, and Visualization
+
+Screenshot 1 (Placement Statistics):
+
+1. Log Messages: The terminal window displays log messages from the OpenLANE run, providing statistics about the placement process:
+2. Design Area: Total area, utilized area, and utilization percentage.
+3. Cell Counts: Numbers of different cell instances and total instances.
+4. Placement Metrics: Data related to cell displacement, wirelength, and HPWL (Half-Perimeter Wirelength), which are indicators of placement quality.
+
+`` run_floorplan ``
+
+![64](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20175722.jpg)
+
+Screenshot 2 (Directory Navigation):
+The user navigates through the OpenLANE project directory, highlighting the placement subdirectory within a specific run's results folder (.../openlane/designs/picorv32a/runs/15-07_12-25/results/placement).
+Purpose: This navigation indicates that the placement results, including placement data and log files, are organized by design and run within the results directory.
+
+`` picorv32a.placement.def``
+
+the above file contains the info about placement
+
+![65](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20180243.jpg)
+
+Screenshot 3 (Layout Viewer - Placement View):
+Placement Display: A layout viewer (tkcon) visualizes the placement of standard cells within the picorv32a design.
+Cell Instances: Individual standard cells are likely represented by rectangles or other shapes, but their specific details are not clearly visible in this screenshot.
+Console Output: The console window suggests that the viewer is loading the design's netlist and technology information for accurate visualization.
+
+navigate to tool by the following command:
+
+``magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &``
+
+![66](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20181533.jpg)
+
+Screenshot 4 (Zoomed-In Placement View):
+
+A zoomed-in view of the layout after placement is presented, showing:
+Standard Cells: The rectangles likely represent individual standard cell instances placed on the layout.
+Labels: Some cells have labels indicating their types or functions (e.g., _19458, _19321).
+Routing Tracks: Faint lines in the background might represent the available routing tracks for interconnecting the cells.
+
+for more controls use these commands:
+
+    # Design Alignment Instructions
+
+    ## Centering the Design
+
+    1. Press `S` to select the entire design.
+    2. Press `V` to vertically align it to the middle of the screen.
+
+    ## Zooming In on a Specific Area
+
+    1. Left-click and drag to select the desired region.
+    2. Right-click to bring up the context menu.
+    3. Press `Z` to zoom in on the selected area.
+
+    ## Getting Details of a Cell
+
+    1. Move your cursor to the cell of interest.
+    2. Press `S` to select the cell.
+    3. In the `tkcon` window, enter the command `what` to display cell details.
+
+![67](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d2/sk2/l5-lab/Screenshot%202024-07-15%20182128.jpg)
 
 
 
