@@ -890,7 +890,9 @@ previouly it was set to 1 as default and was divided in equal manner
 ![70](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-16%20001813.jpg)
 
 
+Lab D3
 
+![]()
 
 
 
