@@ -889,10 +889,92 @@ previouly it was set to 1 as default and was divided in equal manner
 
 ![70](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-16%20001813.jpg)
 
+### lab ss
 
-Lab D3
+![71](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-15%20192134.jpg)
+![72](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-15%20192348.jpg)
+![73](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l0-lab/Screenshot%202024-07-16%20001813.jpg)
 
-![]()
+
+[74](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l5-lab/Screenshot%202024-07-16%20180433.jpg)
+[75](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l5-lab/Screenshot%202024-07-16%20181101.jpg)
+![76](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk1/l5-lab/Screenshot%202024-07-16%20181716.jpg)
+
+![77](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk2/l8-lab/Screenshot%202024-07-16%20194152.jpg)
+![78](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk2/l8-lab/Screenshot%202024-07-16%20194927.jpg)
+![79](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk2/l8-lab/Screenshot%202024-07-16%20195314.jpg)
+![80](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk2/l8-lab/Screenshot%202024-07-16%20195418.jpg)
+![81](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk2/l8-lab/Screenshot%202024-07-16%20195440.jpg)
+![82](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk2/l8-lab/Screenshot%202024-07-16%20195615.jpg)
+
+![83](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l1-lab/Screenshot%202024-07-16%20225203.jpg)
+![84](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l1-lab/Screenshot%202024-07-16%20231009.jpg)
+
+![85](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-16%20231111.jpg)
+![86](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-16%20233040.jpg)
+![87](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-16%20233138.jpg)
+![88](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-16%20233214.jpg)
+![89](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-16%20233227.jpg)
+![90](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-17%20091821.jpg)
+![91](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l2-lab/Screenshot%202024-07-17%20091937.jpg)
+
+![92](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l4/Screenshot%202024-07-17%20094827.jpg)
+
+
+![93](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l5/Screenshot%202024-07-17%20095021.jpg)
+![94](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l5/Screenshot%202024-07-17%20095150.jpg)
+![95](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l5/Screenshot%202024-07-17%20095515.jpg)
+![96](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l5/Screenshot%202024-07-17%20104547.jpg)
+![97](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l5/Screenshot%202024-07-17%20104857.jpg)
+
+
+![98](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l6/Screenshot%202024-07-17%20105212.jpg)
+![99](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l6/Screenshot%202024-07-17%20105459.jpg)
+![100](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l6/Screenshot%202024-07-17%20110530.jpg)
+![101](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l6/Screenshot%202024-07-17%20124417.jpg)
+![102](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l6/Screenshot%202024-07-17%20130015.jpg)
+
+![103](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l8/Screenshot%202024-07-17%20130236.jpg)
+![104](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l8/Screenshot%202024-07-17%20131022.jpg)
+
+![105](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l9/Screenshot%202024-07-17%20131333.jpg)
+![106](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d3/sk3/l9/Screenshot%202024-07-17%20132659.jpg)
+
+![107](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l1/Screenshot%202024-07-17%20134745.jpg)
+![108](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l1/Screenshot%202024-07-17%20135120.jpg)
+![109](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l1/Screenshot%202024-07-17%20135153.jpg)
+
+![110](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l2/Screenshot%202024-07-17%20143612.jpg)
+![111](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l2/Screenshot%202024-07-17%20144255.jpg)
+![112](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l2/Screenshot%202024-07-17%20144434.jpg)
+![113](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l2/Screenshot%202024-07-17%20144826.jpg)
+
+![114](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l3/Screenshot%202024-07-17%20172332.jpg)
+![115](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l3/Screenshot%202024-07-17%20172632.jpg)
+![116](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l3/Screenshot%202024-07-17%20195920.jpg)
+
+![117](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l7/Screenshot%202024-07-17%20202309.jpg)
+![118](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l7/Screenshot%202024-07-18%20113833.jpg)
+![119](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk1/l7/Screenshot%202024-07-18%20113847.jpg)
+
+![120](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk2/l3/Screenshot%202024-07-18%20114938.jpg)
+![121](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk2/l3/Screenshot%202024-07-18%20115652.jpg)
+![122](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk2/l3/Screenshot%202024-07-18%20122737.jpg)
+![123](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk2/l3/Screenshot%202024-07-18%20122755.jpg)
+
+
+![124](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk3/l3/Screenshot%202024-07-18%20124212.jpg)
+![125](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk3/l3/Screenshot%202024-07-18%20124334.jpg)
+![126](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk3/l3/Screenshot%202024-07-18%20124437.jpg)
+
+
+
+
+
+
+
+
+
 
 
 
