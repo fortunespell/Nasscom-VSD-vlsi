@@ -1,3 +1,6 @@
+# Design
+set ::env(DESIGN_NAME) "picorv32a"
+
 set ::env(VERILOG_FILES) "./designs/picorv32a/src/picorv32a.v"
 set ::env(SDC_FILE) "./designs/picorv32a/src/picorv32a.sdc"
 
