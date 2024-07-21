@@ -1,0 +1,28 @@
+Chip area for module '\picorv32a': 147712.918400
+
+tns -711.59
+wns -23.89
+ package require openlane 0.9
+prep -design picorv32a -tag 19-07_15-38 -overwrite
+
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis 
+run_floorplan
+init_floorplan
+place_io
+tap_decap_or
+run_placement
+$ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
+
+/designs/picorv32a/runs/18-07_05-55/tmp
+
+echo $::env(SYNTH_SIZING)
+set ::env(SYNTH_SIZING) 1 
+puts $::env(SYNTH_STRATEGY)
+
+
+report_net -connections _10910_
+help replace_cell
+replace_cell _13690_ sky130_fd_sc_hd__or2_2
+report_checks fields {net cap slew input_pins} -digits 4
