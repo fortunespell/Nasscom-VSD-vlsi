@@ -26,3 +26,16 @@ report_net -connections _10910_
 help replace_cell
 replace_cell _13690_ sky130_fd_sc_hd__or2_2
 report_checks fields {net cap slew input_pins} -digits 4
+
+
+
+openroad
+read_lef <path of merge.nom.lef>
+read_def <path of def>
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /home/OpenLane/designs/picorv32a/runs/RUN_1/results/synthesis/picorv32a.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+read_sdc /home/OpenLane/designs/picorv32a/src/base.sdc
+set_propagated_clock (all_clocks)
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
