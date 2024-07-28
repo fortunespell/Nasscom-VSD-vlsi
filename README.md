@@ -968,12 +968,8 @@ previouly it was set to 1 as default and was divided in equal manner
 ![126](https://github.com/fortunespell/Nasscom-VSD-vlsi/blob/main/vsd/d4/sk3/l3/Screenshot%202024-07-18%20124437.jpg)
 
 
-
-
-
-
-
-
+![Screenshot 2024-07-23 171002](https://github.com/user-attachments/assets/8d6eda4d-5aa6-4d4e-ba5b-742acb3864bf)
+![Screenshot 2024-07-23 170619](https://github.com/user-attachments/assets/a653c05e-5740-4b73-b1b4-454cedaabeaf)
 
 
 
